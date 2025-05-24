@@ -9,6 +9,11 @@
 hfutnet.exe -s/--sid <学号> -p/--password <密码>
 ```
 
+## 使用示例
+```cmd
+hfutnet.exe -s 123456789 -p 114514
+```
+
 # 独立编译
 
 ## 环境依赖
@@ -17,7 +22,7 @@ hfutnet.exe -s/--sid <学号> -p/--password <密码>
 - Git
 
 ## 编译步骤
-```bash
+```cmd
 git clone https://github.com/Pectics/hfutnet.git
 cd hfutnet
 g++ hfutnet.cpp -o hfutnet.exe -lwininet
