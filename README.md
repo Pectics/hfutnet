@@ -33,21 +33,21 @@ g++ hfutnet.cpp -o hfutnet.exe -lwininet
 ## 启动电脑时自动登录
 1. 将`hfutnet.exe`放在一个固定的目录下，比如`C:\hfutnet.exe`
 2. 按`Win + R`，输入`taskschd.msc`，打开任务计划程序
-![运行](/assets/1-1.png)
-![任务计划程序](/assets/1-2.png)
+<img src="/assets/1-1.png" alt="运行" style="max-width: 80%">
+<img src="/assets/1-2.png" alt="任务计划程序" style="max-width: 80%">
 3. 选择左侧`任务计划程序库`，在右侧点击`创建基本任务`
-![创建基本任务](/assets/1-3.png)
+<img src="/assets/1-3.png" alt="创建基本任务" style="max-width: 80%">
 4. 输入任务名称，比如`CampusNetworkAutoLoginOnBoot`，点击`下一页`
 5. 选择`当计算机启动时`，点击`下一页`
-![选择触发器](/assets/1-4.png)
+<img src="/assets/1-4.png" alt="选择触发器" style="max-width: 80%">
 6. 选择`启动程序`，点击`下一页`
-![选择操作](/assets/1-5.png)
+<img src="/assets/1-5.png" alt="选择操作" style="max-width: 80%">
 7. 在`程序/脚本`中输入`C:\hfutnet.exe`，在`添加参数`中输入`-s <学号> -p <密码>`，点击`下一页`
-![配置启动程序](/assets/1-6.png)
+<img src="/assets/1-6.png" alt="配置启动程序" style="max-width: 80%">
 8. 点击`完成`
-![完成](/assets/1-7.png)
+<img src="/assets/1-7.png" alt="完成" style="max-width: 80%">
 9. 右键点击刚刚创建的任务，选择`属性`
-![任务属性](/assets/1-8.png)
+<img src="/assets/1-8.png" alt="任务属性" style="max-width: 80%">
 10. 在`常规`选项卡中，选择`不管是否登录都要运行`，并勾选`使用最高权限运行`
-![常规](/assets/1-9.png)
+<img src="/assets/1-9.png" alt="常规" style="max-width: 80%">
 11. 点击`确定`，输入管理员密码确认即可
