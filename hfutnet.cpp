@@ -2,6 +2,9 @@
 #include <wininet.h>
 #include <iostream>
 #include <string>
+#include <sstream>
+#include <iomanip>
+#include <cctype>
 
 #pragma comment(lib, "wininet.lib")
 
@@ -31,6 +34,24 @@ bool parse_args(int argc, char* argv[], std::string& sid, std::string& password)
         }
     }
     return !(sid.empty() || password.empty());
+}
+
+std::string url_encode_form_component(const std::string& value) {
+    std::ostringstream escaped;
+    escaped.fill('0');
+    escaped << std::uppercase << std::hex;
+
+    for (unsigned char c : value) {
+        if (std::isalnum(c) || c == '-' || c == '_' || c == '.' || c == '*') {
+            escaped << static_cast<char>(c);
+        } else if (c == ' ') {
+            escaped << '+';
+        } else {
+            escaped << '%' << std::setw(2) << static_cast<int>(c);
+        }
+    }
+
+    return escaped.str();
 }
 
 int main(int argc, char* argv[]) {
@@ -68,7 +89,8 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    std::string postData = "DDDDD=" + sid + "&upass=" + password + "&0MKKey=123";
+    std::string postData = "DDDDD=" + url_encode_form_component(sid)
+        + "&upass=" + url_encode_form_component(password) + "&0MKKey=123";
     const char* headers = "Content-Type: application/x-www-form-urlencoded";
 
     BOOL bSend = HttpSendRequestA(
