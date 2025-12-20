@@ -6,13 +6,21 @@
 
 # 使用方法
 ```cmd
-hfutnet.exe -s/--sid <学号> -p/--password <密码>
+hfutnet.exe <学号> <密码> [--login/-i]
+hfutnet.exe --logout/-o
 ```
 
 ## 命令示例
 ```cmd
-hfutnet.exe -s 123456789 -p 114514
+hfutnet.exe 123456789 114514
+hfutnet.exe --logout
 ```
+
+# 更新日志
+
+- **2025-12-21**: 彻底重构代码结构，拆分常量和工具函数到单独文件，适配上游变化
+- **2025-09-20**: 为 `sid` 和 `password` 参数添加了 `url_encode()` 预处理步骤
+- **2025-05-25**: 首次版本提交
 
 # 独立编译
 
@@ -25,7 +33,7 @@ hfutnet.exe -s 123456789 -p 114514
 ```cmd
 git clone https://github.com/Pectics/hfutnet.git
 cd hfutnet
-g++ hfutnet.cpp -o hfutnet.exe -lwininet
+g++ hfutnet.cpp hfutnet/consts.h hfutnet/utils.hpp -o hfutnet.exe -lwininet -lcrypt32
 ```
 
 # 使用示例
@@ -42,7 +50,7 @@ g++ hfutnet.cpp -o hfutnet.exe -lwininet
 <img src="/assets/1-4.png" alt="选择触发器" width="500">
 6. 选择`启动程序`，点击`下一页`
 <img src="/assets/1-5.png" alt="选择操作" width="500">
-7. 在`程序/脚本`中输入`C:\hfutnet.exe`，在`添加参数`中输入`-s <学号> -p <密码>`，点击`下一页`
+7. 在`程序/脚本`中输入`C:\hfutnet.exe`，在`添加参数`中输入`<学号> <密码>`，点击`下一页`
 <img src="/assets/1-6.png" alt="配置启动程序" width="500">
 8. 点击`完成`
 <img src="/assets/1-7.png" alt="完成" width="500">
