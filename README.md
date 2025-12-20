@@ -1,44 +1,44 @@
-# hfutnet
+## hfutnet
 一个可以快速连接合肥工业大学校园网的工具
 
-# 开发背景
+## 开发背景
 由于工大校园网的连接方式比较原始，无法在插拔网线前后保存连接会话、实现自动登录。为了简化/自动化这一过程，我开发了这个工具。
 
-# 使用方法
+## 使用方法
 ```cmd
 hfutnet.exe <学号> <密码> [--login/-i]
 hfutnet.exe --logout/-o
 ```
 
-## 命令示例
+### 命令示例
 ```cmd
 hfutnet.exe 123456789 114514
 hfutnet.exe --logout
 ```
 
-# 更新日志
+## 更新日志
 
 - **2025-12-21**: 彻底重构代码结构，拆分常量和工具函数到单独文件，适配上游变化
 - **2025-09-20**: 为 `sid` 和 `password` 参数添加了 `url_encode()` 预处理步骤
 - **2025-05-25**: 首次版本提交
 
-# 独立编译
+## 独立编译
 
-## 环境依赖
+### 环境依赖
 - Windows 10/11
 - MinGW-w64
 - Git
 
-## 编译步骤
+### 编译步骤
 ```cmd
 git clone https://github.com/Pectics/hfutnet.git
 cd hfutnet
 g++ hfutnet.cpp hfutnet/consts.h hfutnet/utils.hpp -o hfutnet.exe -lwininet -lcrypt32
 ```
 
-# 使用示例
+## 使用示例
 
-## 启动电脑时自动登录
+### 启动电脑时自动登录
 1. 将`hfutnet.exe`放在一个固定的目录下，比如`C:\hfutnet.exe`
 2. 按`Win + R`，输入`taskschd.msc`，打开任务计划程序
 <img src="/assets/1-1.png" alt="运行" width="500">
