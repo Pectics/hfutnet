@@ -49,7 +49,7 @@
 
 ### 使用方法
 
-```bash
+```cmd
 # 登录校园网（默认操作）
 hfutnet.exe <学号> <密码> [--login | -i]
 
@@ -188,7 +188,7 @@ hfutnet.exe [--logout | -o]
 
 ### 编译步骤
 
-```bash
+```cmd
 # 1. 克隆仓库
 git clone https://github.com/Pectics/hfutnet.git
 cd hfutnet
@@ -197,7 +197,7 @@ cd hfutnet
 g++ hfutnet.cpp hfutnet/consts.h hfutnet/utils.hpp -o hfutnet.exe -lwininet -lcrypt32
 
 # 3. 运行程序
-./hfutnet.exe <学号> <密码>
+hfutnet.exe <学号> <密码>
 ```
 
 > **注意**: 编译时需要链接 `wininet` 和 `crypt32` 库。
