@@ -85,13 +85,13 @@ hfutnet.exe [--logout | -o]
 按 `Win + R`，输入 `taskschd.msc`，打开任务计划程序
 
 <p align="center">
-  <img src="/assets/1-1.png" alt="运行对话框" width="450">
+  <img src="assets/1-1.png" alt="运行对话框" width="450">
   <br>
   <em>打开运行对话框</em>
 </p>
 
 <p align="center">
-  <img src="/assets/1-2.png" alt="任务计划程序界面" width="700">
+  <img src="assets/1-2.png" alt="任务计划程序界面" width="700">
   <br>
   <em>任务计划程序主界面</em>
 </p>
@@ -100,7 +100,7 @@ hfutnet.exe [--logout | -o]
 选择左侧 `任务计划程序库`，在右侧点击 `创建基本任务`
 
 <p align="center">
-  <img src="/assets/1-3.png" alt="创建基本任务" width="700">
+  <img src="assets/1-3.png" alt="创建基本任务" width="700">
   <br>
   <em>创建新任务</em>
 </p>
@@ -112,7 +112,7 @@ hfutnet.exe [--logout | -o]
 选择 `当计算机启动时`，点击 `下一页`
 
 <p align="center">
-  <img src="/assets/1-4.png" alt="选择触发器" width="500">
+  <img src="assets/1-4.png" alt="选择触发器" width="500">
   <br>
   <em>设置开机触发</em>
 </p>
@@ -121,7 +121,7 @@ hfutnet.exe [--logout | -o]
 选择 `启动程序`，点击 `下一页`
 
 <p align="center">
-  <img src="/assets/1-5.png" alt="选择操作" width="500">
+  <img src="assets/1-5.png" alt="选择操作" width="500">
   <br>
   <em>选择启动程序操作</em>
 </p>
@@ -132,7 +132,7 @@ hfutnet.exe [--logout | -o]
 - 点击 `下一页`
 
 <p align="center">
-  <img src="/assets/1-6.png" alt="配置启动程序" width="500">
+  <img src="assets/1-6.png" alt="配置启动程序" width="500">
   <br>
   <em>配置程序路径和参数</em>
 </p>
@@ -141,7 +141,7 @@ hfutnet.exe [--logout | -o]
 点击 `完成` 按钮
 
 <p align="center">
-  <img src="/assets/1-7.png" alt="完成创建" width="500">
+  <img src="assets/1-7.png" alt="完成创建" width="500">
   <br>
   <em>确认任务创建</em>
 </p>
@@ -150,7 +150,7 @@ hfutnet.exe [--logout | -o]
 右键点击刚创建的任务，选择 `属性`
 
 <p align="center">
-  <img src="/assets/1-8.png" alt="任务属性" width="700">
+  <img src="assets/1-8.png" alt="任务属性" width="700">
   <br>
   <em>打开任务属性</em>
 </p>
@@ -162,7 +162,7 @@ hfutnet.exe [--logout | -o]
 - 点击 `确定`
 
 <p align="center">
-  <img src="/assets/1-9.png" alt="常规设置" width="500">
+  <img src="assets/1-9.png" alt="常规设置" width="500">
   <br>
   <em>配置运行权限</em>
 </p>
