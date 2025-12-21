@@ -5,8 +5,8 @@
 **合肥工业大学校园网快速连接工具**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Platform](https://img.shields.io/badge/platform-Windows-blue.svg)](https://www.microsoft.com/windows)
-[![Language](https://img.shields.io/badge/language-C++-00599C.svg)](https://isocpp.org/)
+[![Platform](https://img.shields.io/badge/Platform-Windows-blue.svg)](https://www.microsoft.com/windows)
+[![Language](https://img.shields.io/badge/Language-C++-00599C.svg)](https://isocpp.org/)
 
 一个简单高效的命令行工具，用于快速登录和登出合肥工业大学校园网
 
