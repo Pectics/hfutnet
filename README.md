@@ -12,9 +12,7 @@
 
 </div>
 
----
-
-## 📋 目录
+## 📋 目录跳转
 
 - [功能特性](#功能特性)
 - [快速开始](#快速开始)
@@ -24,50 +22,35 @@
   - [开机自动登录](#开机自动登录)
 - [编译指南](#编译指南)
 - [更新日志](#更新日志)
+- [代码贡献](#代码贡献)
 - [许可证](#许可证)
-- [贡献](#贡献)
-
----
 
 ## ✨ 功能特性
 
-- ✅ **快速登录** - 一键连接校园网，无需打开浏览器
-- 🔓 **快速登出** - 简单注销校园网连接
-- 🤖 **自动化支持** - 可配合任务计划程序实现开机自动登录
-- 🛠️ **轻量级** - 单文件可执行程序，无需额外依赖
-- ⚡ **高效** - 使用 C++ 编写，运行速度快
-
----
-
-## 🎯 开发背景
-
-工大校园网的连接方式比较原始，无法在插拔网线前后保存连接会话、实现自动登录。为了简化和自动化这一过程，开发了这个实用工具。
-
----
+- ✅ **快速操作** - 一键登录/登出校园网，无需打开浏览器
+- ⚡ **轻量高效** - 单文件可执行程序，使用C++编写，运行速度快
+- 🤖 **自动化** - 可配合任务计划程序实现开机自动登录
 
 ## 🚀 快速开始
 
 ### 使用方法
 
 ```cmd
-# 登录校园网（默认操作）
-hfutnet.exe <学号> <密码> [--login | -i]
+# 登录校园网
+hfutnet.exe <学号> <密码> [--login/-i]
 
 # 登出校园网
-hfutnet.exe [--logout | -o]
+hfutnet.exe --logout/-o
 ```
 
 ### 命令示例
 
 | 操作 | 命令 | 说明 |
 |------|------|------|
-| 🔐 登录 | `hfutnet.exe 2024213492 yourpassword` | 使用学号和密码登录 |
-| 🔐 登录（显式） | `hfutnet.exe 2024213492 yourpassword --login` | 显式指定登录操作 |
-| 🔓 登出 | `hfutnet.exe --logout` | 登出当前网络连接 |
+| 🔐登录 | `hfutnet.exe 2024123456 114514 --login` | 使用学号和密码登录 |
+| 🔓登出 | `hfutnet.exe --logout` | 登出当前网络连接 |
 
 > **提示**: 如果不指定操作选项，程序默认执行登录操作。
-
----
 
 ## 💡 使用场景
 
@@ -79,7 +62,7 @@ hfutnet.exe [--logout | -o]
 <summary><b>📖 点击查看详细配置步骤</b></summary>
 
 #### 步骤 1: 准备工作
-将 `hfutnet.exe` 放在固定目录，例如 `C:\Tools\hfutnet.exe`
+将 `hfutnet.exe` 放在固定目录，例如 `C:\hfutnet.exe`
 
 #### 步骤 2: 打开任务计划程序
 按 `Win + R`，输入 `taskschd.msc`，打开任务计划程序
@@ -127,7 +110,7 @@ hfutnet.exe [--logout | -o]
 </p>
 
 #### 步骤 7: 配置程序
-- **程序/脚本**: 输入程序的完整路径（如 `C:\Tools\hfutnet.exe`）
+- **程序/脚本**: 输入程序的完整路径（如 `C:\hfutnet.exe`）
 - **添加参数**: 输入 `<你的学号> <你的密码>`
 - 点击 `下一页`
 
@@ -174,8 +157,6 @@ hfutnet.exe [--logout | -o]
 
 </details>
 
----
-
 ## 🔧 编译指南
 
 ### 环境要求
@@ -183,26 +164,26 @@ hfutnet.exe [--logout | -o]
 | 组件 | 说明 |
 |------|------|
 | 🖥️ **操作系统** | Windows 10/11 |
-| 🔨 **编译器** | MinGW-w64 (支持 C++17) |
+| 🔨 **编译工具** | MinGW-w64 或 MSVC |
 | 📦 **版本控制** | Git |
 
 ### 编译步骤
 
-```cmd
+```pwsh
 # 1. 克隆仓库
 git clone https://github.com/Pectics/hfutnet.git
 cd hfutnet
 
 # 2. 编译项目
-g++ hfutnet.cpp hfutnet/consts.h hfutnet/utils.hpp -o hfutnet.exe -lwininet -lcrypt32
+
+g++ hfutnet.cpp hfutnet/consts.h hfutnet/utils.hpp -o hfutnet.exe -lwininet -lcrypt32 # 使用 g++
+cl hfutnet.cpp /Fehfutnet.exe /link wininet.lib crypt32.lib # 使用 MSVC
 
 # 3. 运行程序
 hfutnet.exe <学号> <密码>
 ```
 
 > **注意**: 编译时需要链接 `wininet` 和 `crypt32` 库。
-
----
 
 ## 📝 更新日志
 
@@ -212,20 +193,14 @@ hfutnet.exe <学号> <密码>
 | **2025-09-20** | 🔒 为 `sid` 和 `password` 参数添加 URL 编码预处理 |
 | **2025-05-25** | 🎉 首次版本提交 |
 
----
+## 🤝 代码贡献
+
+欢迎提交 [Issue](https://github.com/Pectics/hfutnet/issues) 和 [Pull Request](https://github.com/Pectics/hfutnet/pulls)！
 
 ## 📄 许可证
 
-本项目采用 [MIT 许可证](LICENSE) 开源。
-
----
-
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request！
-
----
+本项目采用 [MIT License](LICENSE) 开源。
 
 <div align="center">
-  <sub>Made with ❤️ by <a href="https://github.com/Pectics">Pectics</a></sub>
+  <sub>Made with ❤️ by <a href="https://pectics.me">Pectics</a></sub>
 </div>
