@@ -35,7 +35,7 @@
 
 ### 使用方法
 
-```cmd
+```pwsh
 # 登录校园网
 hfutnet.exe <学号> <密码> [--login/-i]
 
