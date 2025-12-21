@@ -7,20 +7,20 @@
 ### 1.1 基本格式
 
 ```
-action(scope): 中文介绍摘要
+type(scope): subject
 ```
 
 或带详细说明的完整格式：
 
 ```
-action(scope): 中文介绍摘要
+type(scope): subject
 
 - 中文详细变更说明1
 - 中文详细变更说明2
 - ...
 ```
 
-### 1.2 Action 类型
+### 1.2 Type 类型
 
 - `feat`: 新增功能
 - `fix`: 修复错误
@@ -63,18 +63,18 @@ docs(README): 更新编译步骤说明
 
 ## 2. PR Title 格式约定
 
-PR 的 title 使用以下格式：
+PR 的 title 使用与 Commit Message 相同的格式：
 
 ```
-action: 变更内容概要介绍
+type(scope): subject
 ```
 
 ### 2.1 示例
 
-- `feat: 添加自动重连功能`
-- `fix: 修复登录失败时的错误处理`
-- `refactor: 重构代码结构，拆分模块`
-- `docs: 完善使用文档和编译说明`
+- `feat(core): 添加自动重连功能`
+- `fix(core): 修复登录失败时的错误处理`
+- `refactor(*): 重构代码结构，拆分模块`
+- `docs(README): 完善使用文档和编译说明`
 
 ## 3. 代码规范约定
 
